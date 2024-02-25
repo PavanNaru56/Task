@@ -1,0 +1,23 @@
+<h1>List Of Products</h1><div class="g-container">
+ 
+<% for(product of products) {%>
+
+    <div class="card">
+        <div class = "img-container">
+            <img class="image" id="image" src=<%= product.image %> alt="Product Image">
+        </div>
+        <div class = "details-container">
+
+        
+        <div class="title" id="title"><%= product.title %></div>
+        <div class="price" id="price"><%= product.price %></div>
+        <div class="desc" id="desc"><%= product.desc %></div>
+        <div class="category" id="category"><%= product.category %></div>
+        
+        <div class="sold" id="sold">Sold: <%= product.sold %></div>
+        <div class="date" id="date">Date of Sale: <%= product.dateOfSale %></div>
+
+        </div>
+      </div>
+
+<%}%>

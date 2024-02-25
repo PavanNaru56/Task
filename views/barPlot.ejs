@@ -1,0 +1,61 @@
+<div class="g-container">
+    <h1>Bar Plot</h1>
+
+    <canvas id = "canvas"></canvas>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<script>
+
+    // var xmlhttp = new XMLHttpRequest();
+    // var url = "../data.json";
+    // xmlhttp.open("GET",url,true);
+    // xmlhttp.send();
+
+    // xmlhttp.onreadystatechange = function(){
+    //     if(this.readyState == 4 && this.status == 200){
+    //         var data = JSON.parse(this.responseText);
+
+    //         date = data.map((ele)=>{
+    //             return ele.dateOfSale
+    //         } );
+
+    //         console.log(date);
+    //     }
+    // }
+
+    
+    
+
+
+
+
+    
+    
+
+     
+
+
+    const ctx = document.getElementById('canvas');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June','July','August','Sept','Oct','Nov','Dec'],
+        datasets: [{
+          label: '# of Votes',
+          data: [102,202,403,405,506,768,455,988,233,455,2666,6879,3546,1243],
+          backgroundColor : "#ff335e",
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
